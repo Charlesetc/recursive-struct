@@ -1,6 +1,34 @@
-# Recursive::Struct
+# Recursive-Struct
 
-TODO: Write a gem description
+##### Perfect Open Structs.
+
+## Examples
+
+Setting a Recursive Struct is easy:
+
+```
+lord_trumpet = RecursiveStruct.new
+lord_trumpet.species = 'dog'
+lord_trumpet.fur.color = 'black'
+lord_trumpet.owner.hair.color = 'brown'
+```
+
+Getting one is easier:
+
+```
+lord_trumpet.species # => "dog"
+lord_trumpet.fur.color # => "black"
+lord_trumpet.owner.hair.color # => "brown"
+```
+
+### Initialize with a Hash
+
+```
+jet_plane = RecursiveStruct.new seats: 24, passengers: { first: 'joe', second: 'bob' ... }
+
+jet_plane.seats # => 24
+jet_plane.passengers.first # => 'joe'
+```
 
 ## Installation
 
