@@ -49,28 +49,31 @@ class RecursiveStruct < OpenStruct
 	
 end
 
-r = RecursiveStruct.new
 
-r.time = 'now'
+# Examples
 
-puts r.time
-
-r.dog.breed = 'poodle'
-
-puts r.dog.breed
-
-r.wow.hi.great.golly = 'nope'
-
-puts r.wow.hi.great.golly
-
-hash = {cat: 'none', dog: { color: 'black', breed: 'poodle' }} 
-
-i = RecursiveStruct.new hash
-
-puts i.cat
-
-puts i.dog
-
-puts i.dog.color
-
-puts i.dog.breed
+# r = RecursiveStruct.new
+#
+# r.time = 'now'
+#
+# puts r.time
+#
+# r.dog.breed = 'poodle'
+#
+# puts r.dog.breed
+#
+# r.wow.hi.great.golly = 'nope'
+#
+# puts r.wow.hi.great.golly
+#
+# hash = {cat: 'none', dog: { color: 'black', breed: 'poodle' }}
+#
+# i = RecursiveStruct.new hash
+#
+# puts i.cat
+#
+# puts i.dog
+#
+# puts i.dog.color
+#
+# puts i.dog.breed
