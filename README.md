@@ -21,7 +21,15 @@ lord_trumpet.fur.color # => "black"
 lord_trumpet.owner.hair.color # => "brown"
 ```
 
-### Initialize with a Hash
+Note: You _cannot_ assign a value to an intermediate method.
+```
+lord_trumpet.owner # => #<RecursiveStruct>
+lord_trumpet.owner = 'Paul'
+lord_trumpet.owner # => #<RecursiveStruct>
+```
+
+
+#### Initialize with a Hash
 
 ```
 jet_plane = RecursiveStruct.new seats: 24, passengers: { first: 'joe', second: 'bob' ... }
@@ -29,6 +37,7 @@ jet_plane = RecursiveStruct.new seats: 24, passengers: { first: 'joe', second: '
 jet_plane.seats # => 24
 jet_plane.passengers.first # => 'joe'
 ```
+
 
 ## Installation
 

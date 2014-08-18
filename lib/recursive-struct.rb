@@ -39,8 +39,8 @@ class RecursiveStruct < OpenStruct
 		if mname.chomp!('=')
 			super(mid, *args)
 		elsif len == 0
-			return @table[mid] if @table[mid]
 			return @recursive_table[mid] if @recursive_table[mid]
+			return @table[mid] if @table[mid]
 			@recursive_table[mid] = RecursiveStruct.new
 		else
 			raise NoMethodError, "undefined method `#{mid}' for #{self}", caller(1)
